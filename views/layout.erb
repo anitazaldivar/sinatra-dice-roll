@@ -1,0 +1,35 @@
+<!-- /views/wrapper.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roll</title>
+
+  <style>
+    /* Add this style block to your head section */
+    #navigation {
+      display: flex; /* Use flexbox to create a flexible container */
+      justify-content: space-between; /* Distribute space between elements */
+    }
+    
+    #navigation div {
+      display: inline; /* or you could use inline-block */
+      margin-right: 10px; /* Add some space between the links */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navigation">
+    <div><a href="/">Home</a></div>
+    <div><a href="/dice/2/6">2d6</a></div>
+    <div><a href="/dice/2/10">2d10</a></div>
+    <div><a href="/dice/1/20">1d20</a></div>
+    <div><a href="/dice/5/4">4d5</a></div>
+  </div>
+
+  <%= yield %>
+  <!-- This is the part that is not the same across all actions-->
+	
+</body>
+</html>
